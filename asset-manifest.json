@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Users/jlrc2/Practicas/curso-react-intro/build/static/css/main.572bbfb3.css",
+    "main.js": "/Users/jlrc2/Practicas/curso-react-intro/build/static/js/main.3fee42b6.js",
+    "index.html": "/Users/jlrc2/Practicas/curso-react-intro/build/index.html",
+    "main.572bbfb3.css.map": "/Users/jlrc2/Practicas/curso-react-intro/build/static/css/main.572bbfb3.css.map",
+    "main.3fee42b6.js.map": "/Users/jlrc2/Practicas/curso-react-intro/build/static/js/main.3fee42b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.572bbfb3.css",
+    "static/js/main.3fee42b6.js"
+  ]
+}
