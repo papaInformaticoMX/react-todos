@@ -6,10 +6,7 @@ import { TodoItem } from './components/TodoItem';
 import { CreateTodoButton  } from './components/CreateTodoButton';
 import React from 'react';
 
-const defaultTodos = [
-  { text: 'Aprender React', completed: true },
-  { text: 'Ser el mejor en react', completed: false }
-]
+const defaultTodos = []
 
 function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
@@ -26,6 +23,10 @@ function App() {
     newTodos[todoIndexSelected].completed = true;
     setTodos(newTodos);
   }
+  const deleteTodo = (todoDeleteKey)=>{
+    const newTodos = todos.filter(todo=>todo.text != todoDeleteKey)
+    setTodos(newTodos);
+  } 
 
   return (
     <>
@@ -37,7 +38,8 @@ function App() {
               key={todo.text} 
               text={todo.text} 
               completed={todo.completed} 
-              onComplete={completeTodo}
+              onComplete={()=>{completeTodo((todo.text))}}
+              onDelete={()=>{deleteTodo(todo.text)}}
           />
         ))}
 

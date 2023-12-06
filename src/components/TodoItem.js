@@ -1,13 +1,22 @@
-function TodoItem({text, completed}){
+function TodoItem(props){
     const complete = ()=>{
         
     }
     return (
-        <li className={completed? 'completed':'' }>
+        <li className={props.completed? 'completed':'' }>
             <p>
-            <span  class="linkTerminar" onClick={complete}>{completed? 'completada': 'completar'}</span>
-            {text}
-            <span class="linkEliminar" title="Eliminar">X</span>
+                <span
+                    className="linkTerminar" 
+                    onClick={props.onComplete}>
+                        {props.completed? 'completada': 'completar'}
+                </span>
+                {props.text}
+                <span
+                    onClick={props.onDelete}
+                    className="linkEliminar"
+                    title="Eliminar">
+                        X
+                </span>
             </p>
         </li>
     )
